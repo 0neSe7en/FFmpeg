@@ -613,7 +613,7 @@ static int get_audio_config(AVFormatContext *s)
     ctx->audio_float           = basic_desc->mFormatFlags & kAudioFormatFlagIsFloat;
     ctx->audio_be              = basic_desc->mFormatFlags & kAudioFormatFlagIsBigEndian;
     ctx->audio_signed_integer  = basic_desc->mFormatFlags & kAudioFormatFlagIsSignedInteger;
-    ctx->audio_packed          = basic_desc->mFormatFlags & kAudioFormatFlagIsPacked;
+    ctx->audio_packed          = true;
     ctx->audio_non_interleaved = basic_desc->mFormatFlags & kAudioFormatFlagIsNonInterleaved;
 
     if (basic_desc->mFormatID == kAudioFormatLinearPCM &&
